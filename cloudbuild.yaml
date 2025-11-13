@@ -1,0 +1,11 @@
+steps:
+  # This step is just a placeholder and does nothing
+  - name: 'alpine'
+    entrypoint: 'echo'
+    args: ['This is a dummy build step for testing that does nothing.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['save', 'europe-west1-docker.pkg.dev/testing-is/orcapipe/pipe-image:latest', '-o', 'image.tar']
+
+# Optionally, you can define a timeout
+timeout: '600s'  # 10 minutes
