@@ -5,7 +5,7 @@ steps:
     args: ['This is a dummy build step for testing that does nothing.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['load', 'europe-west1-docker.pkg.dev/testing-is/orcapipe/pipe-image:latest', '-o', 'image.tar']
+    args: ['save', 'europe-west1-docker.pkg.dev/testing-is/orcapipe/pipe-image:latest', '-o', 'image.tar']
 
 # Optionally, you can define a timeout
 timeout: '600s'  # 10 minutes
